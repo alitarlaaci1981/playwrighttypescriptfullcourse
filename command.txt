@@ -1,0 +1,2 @@
+run specific test in specific browser: npx playwright test Chapter01/01_Record_test.spec.ts --project='firefox'
+run code gen : npx playwright codegen
