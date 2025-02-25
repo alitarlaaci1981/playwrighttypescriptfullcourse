@@ -1,2 +1,3 @@
 run specific test in specific browser: npx playwright test Chapter01/01_Record_test.spec.ts --project='firefox'
 run code gen : npx playwright codegen
+run one worker only command: npx playwright test tests/Chapter02/03_Hooks_Test.spec.ts --project="Google Chrome" --workers=1
