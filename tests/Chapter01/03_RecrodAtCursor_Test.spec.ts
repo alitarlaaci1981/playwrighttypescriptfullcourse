@@ -2,6 +2,7 @@
 import {test,expect} from '@playwright/test';
 
 test('this is the first test',async({page})=>{
+    console.log(`tEST execution started...`)
     await page.goto("https://www.google.com/");
 
     await page.getByLabel('Search',{exact:true}).fill('playwright by testerstalk');

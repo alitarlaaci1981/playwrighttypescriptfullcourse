@@ -11,5 +11,6 @@ test('Capture screen shot in playwright',async({page})=>{
     await page.screenshot({path:'./screenshots/PageScreenShot.png'});
 
     //full page screen shot
-    await page.screenshot({path:'./screenshots/FullPageScreenshot.png',fullPage:true})
+    await page.screenshot({path:'./screenshots/FullPageScreenshot.png',fullPage:true});
+    
 })
