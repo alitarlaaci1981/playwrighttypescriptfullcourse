@@ -1,0 +1,73 @@
+<testsuites id="" name="" tests="3" failures="1" skipped="0" errors="0" time="43.594661">
+<testsuite name="Chapter04\04_TestReports_Test.spec.ts" timestamp="2025-03-16T06:19:07.330Z" hostname="Google Chrome" tests="3" failures="1" skipped="0" time="36.04" errors="0">
+<testcase name="Smoke Testing › Annotations test-1" classname="Chapter04\04_TestReports_Test.spec.ts" time="16.512">
+<failure message="04_TestReports_Test.spec.ts:5:9 Annotations test-1" type="FAILURE">
+<![CDATA[  [Google Chrome] › Chapter04\04_TestReports_Test.spec.ts:5:9 › Smoke Testing › Annotations test-1 ─
+
+    Error: Timed out 10000ms waiting for expect(locator).toHaveTitle(expected)
+
+    Locator: locator(':root')
+    Expected string: "playwr by testers talk - YouTube"
+    Received string: "playwright by testers talk - YouTube"
+    Call log:
+      - expect.toHaveTitle with timeout 10000ms
+      - waiting for locator(':root')
+        3 × locator resolved to <html lang="en" refresh="" typography="" system-icons="" darker-dark-theme="" typography-spacing="" darker-dark-theme-deprecate="">…</html>
+          - unexpected value "YouTube"
+        10 × locator resolved to <html lang="en" refresh="" typography="" system-icons="" darker-dark-theme="" typography-spacing="" darker-dark-theme-deprecate="">…</html>
+           - unexpected value "playwright by testers talk - YouTube"
+
+
+      12 |        await page.getByPlaceholder('Search',{exact:true}).first().press('Enter');
+      13 |        await expect(page).toHaveURL('https://www.youtube.com/results?search_query=playwright+by+testers+talk');
+    > 14 |        await expect(page).toHaveTitle('playwr by testers talk - YouTube');
+         |                           ^
+      15 |         
+      16 |         await page.waitForTimeout(2000);
+      17 |        
+        at C:\Users\kemal\OneDrive\Desktop\All Folders\my projects\playwrighttypescriptfullcourse\tests\Chapter04\04_TestReports_Test.spec.ts:14:27
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\Chapter04-04_TestReports_T-b13de--Testing-Annotations-test-1-Google-Chrome\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\Chapter04-04_TestReports_T-b13de--Testing-Annotations-test-1-Google-Chrome\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\Chapter04-04_TestReports_T-b13de--Testing-Annotations-test-1-Google-Chrome\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[Test executon started
+
+[[ATTACHMENT|test-results\Chapter04-04_TestReports_T-b13de--Testing-Annotations-test-1-Google-Chrome\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\Chapter04-04_TestReports_T-b13de--Testing-Annotations-test-1-Google-Chrome\trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Regression Testing › Annotations test-2" classname="Chapter04\04_TestReports_Test.spec.ts" time="9.97">
+<system-out>
+<![CDATA[Test executon started
+
+[[ATTACHMENT|test-results\Chapter04-04_TestReports_T-2a9b7--Testing-Annotations-test-2-Google-Chrome\test-finished-1.png]]
+
+[[ATTACHMENT|test-results\Chapter04-04_TestReports_T-2a9b7--Testing-Annotations-test-2-Google-Chrome\trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Regression Testing › Annotations test-3" classname="Chapter04\04_TestReports_Test.spec.ts" time="9.558">
+<system-out>
+<![CDATA[Test executon started
+
+[[ATTACHMENT|test-results\Chapter04-04_TestReports_T-c259b--Testing-Annotations-test-3-Google-Chrome\test-finished-1.png]]
+
+[[ATTACHMENT|test-results\Chapter04-04_TestReports_T-c259b--Testing-Annotations-test-3-Google-Chrome\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
