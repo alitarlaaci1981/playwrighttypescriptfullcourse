@@ -4,9 +4,9 @@ import { defineConfig, devices } from '@playwright/test';
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
  */
-// import dotenv from 'dotenv';
-// import path from 'path';
-// dotenv.config({ path: path.resolve(__dirname, '.env') });
+import dotenv from 'dotenv';
+import path from 'path';
+dotenv.config({ path: path.resolve(__dirname, '.env') });
 
 /**
  * See https://playwright.dev/docs/test-configuration.
@@ -28,12 +28,12 @@ export default defineConfig({
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
 
   reporter: [
-    ['html'],
+   //['html'],
     //['list'],
     //['dot'],
    // ['json',{outputFile:'json-test-report.json'}],
     //['junit',{outputFile:'junit-test-report.xml'}],
-    ['allure-playwright'],
+   ['allure-playwright'],
 
   ],
 
@@ -43,11 +43,12 @@ export default defineConfig({
     // baseURL: 'http://127.0.0.1:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
+    
     testIdAttribute:'data-tab-item',
-    video: 'on',
+    video: 'retain-on-failure',
     screenshot:'on',
     headless:false,
-    trace:'on',
+    trace:'retain-on-failure',
     actionTimeout:10000,
   },
 
@@ -98,6 +99,7 @@ export default defineConfig({
     {
       name: 'Google Chrome',
       use: { ...devices['Desktop Chrome'], channel: 'chrome' },
+     //outputDir: 'artifacts/chrome'
     },
   ],
 
