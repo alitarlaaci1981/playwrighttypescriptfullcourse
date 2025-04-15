@@ -28,12 +28,12 @@ export default defineConfig({
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
 
   reporter: [
-   //['html'],
+   ['html'],
     //['list'],
     //['dot'],
    // ['json',{outputFile:'json-test-report.json'}],
     //['junit',{outputFile:'junit-test-report.xml'}],
-   ['allure-playwright'],
+   //['allure-playwright'],
 
   ],
 
